@@ -17,10 +17,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="d-flex flex-column min-vh-100">
+    <%= render 'layouts/partials/flash_messages' %>
+    <%= render 'layouts/partials/header' %>
 
-    <%= yield %>
+    <div class="container flex-grow-1">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/partials/footer' %>
   </body>
 </html>
