@@ -1,10 +1,13 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   # Devise routes for user authentication
   devise_for :users
 
   # Mount Sidekiq web UI at /sidekiq for background job monitoring
-  require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
+  authenticate :user do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   # Define root route
   root 'home#index'
