@@ -21,9 +21,17 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 ## Customize
 
 - Update the project name to reflect your application.
-- Customize the [Devise](https://github.com/heartcombo/devise) configuration to suit your authentication requirements.
+- Customize the [Devise](https://github.com/heartcombo/devise) configuration as only basic setup is included; adjust it to suit your specific authentication requirements.
 - Modify the [Scout APM](https://github.com/scoutapp/scout_apm_ruby) settings as needed, or remove them if application performance monitoring is not required.
-- Rename `.env.development.template` to `.env.development` and `.env.test.template` to `.env.test`. Populate these files with the appropriate environment-specific variables.
+- Run the following rake task to create your environment files:
+    ```bash
+    rake env:setup
+    ````
+  - After running the task, open the newly created .env.development and .env.test files to modify them with the appropriate environment-specific variables as needed.
+- Create DB and seed: 
+    ```bash
+    rails db:create db:migrate db:seed
+    ````
 
 ## Gems
 
@@ -73,13 +81,13 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 ## Rake Tasks
 
 ### Security Check
-Run the following rake task to check for security risks in your application:
+- Run the following rake task to check for security risks in your application:
 
-```bash
-rake security:check
-```
+    ```bash
+    rake security:check
+    ```
 
-This task runs tools like Brakeman and Bundler Audit to ensure your application is secure.
+    - This task runs tools like Brakeman and Bundler Audit to ensure your application is secure.
 
 ## Contact
 

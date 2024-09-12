@@ -9,3 +9,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+unless User.exists?
+  FactoryBot.create(
+    :user,
+    first_name: "admin",
+    last_name: "admin",
+    email: ENV.fetch("GLOBAL_EMAIL", nil),
+    password: ENV.fetch("GLOBAL_PASS", nil),
+    password_confirmation: ENV.fetch("GLOBAL_PASS", nil)
+  )
+end
