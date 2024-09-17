@@ -1,7 +1,7 @@
-@import "libraries/bootstrap";
-@import "libraries/jquery-ui.min";
+@import "bootstrap";
+@import "font-awesome";
 
 // Custom
-@import "application/header";
 @import "application/main";
+@import "application/header";
 @import "application/footer";

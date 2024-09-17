@@ -3,7 +3,9 @@
 source "https://rubygems.org"
 
 gem "bootsnap", require: false
+gem "bootstrap", "~> 5.3.3"
 gem "draper"
+gem "font-awesome-sass", "~> 6.0.0"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
