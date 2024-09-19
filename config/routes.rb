@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   # Mount Sidekiq web UI at /sidekiq for background job monitoring
   authenticate :user do
-    mount Sidekiq::Web => '/sidekiq'
+    mount Sidekiq::Web => "/sidekiq"
   end
 
   # Define root route
-  root 'home#index'
+  root "home#index"
 
   # Health check route at /up for monitoring app status
   get "up" => "rails/health#show", as: :rails_health_check
