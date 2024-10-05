@@ -13,7 +13,6 @@ gem "puma", ">= 5.0"
 gem "rails", "~> 7.2.1"
 gem "redis"
 gem "sassc-rails"
-gem "scout_apm"
 gem "sidekiq"
 gem "simple_form"
 gem "sprockets-rails"
@@ -23,6 +22,10 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 
 # Authentication
 gem "devise"
+
+# Performance and Error Tracking
+gem "rollbar"
+gem "scout_apm"
 
 group :development, :test do
   gem "byebug"
