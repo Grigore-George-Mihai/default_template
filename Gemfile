@@ -23,6 +23,10 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 # Authentication
 gem "devise"
 
+# ActiveAdmin
+gem "activeadmin"
+gem "activeadmin_addons"
+
 # Performance and Error Tracking
 gem "rollbar"
 gem "scout_apm"
