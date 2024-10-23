@@ -134,7 +134,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  config.root_to = 'users#index'
+  config.root_to = "users#index"
 
   # == Admin Comments
   #
@@ -168,7 +168,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   config.before_action do
-    redirect_to root_path, alert: I18n.t('active_admin.flash.unauthorized') unless current_user&.admin?
+    redirect_to root_path, alert: I18n.t("active_admin.flash.unauthorized") unless current_user&.admin?
   end
 
   # == Attribute Filters
@@ -194,7 +194,7 @@ ActiveAdmin.setup do |config|
   # config.favicon = 'favicon.ico'
 
   # == Meta Tags
-  meta_tags_options = { viewport: 'width=device-width, initial-scale=1' }
+  meta_tags_options = { viewport: "width=device-width, initial-scale=1" }
 
   # Add additional meta tags to the head element of active admin pages.
   #
@@ -337,7 +337,7 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  config.footer = 'Default Template'
+  config.footer = "Default Template"
 
   # == Sorting
   #
