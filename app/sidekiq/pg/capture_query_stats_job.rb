@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "sidekiq-scheduler"
-
 module Pg
   class CaptureQueryStatsJob
     include Sidekiq::Job
