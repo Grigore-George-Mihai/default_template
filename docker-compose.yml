@@ -18,7 +18,7 @@ services:
       - POSTGRES_HOST=db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/myapp_development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/default_template_development
       - REDIS_URL=redis://redis:6379/0
     volumes:
       - .:/rails
@@ -50,11 +50,16 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: myapp_development
+      POSTGRES_DB: default_template_development
     ports:
       - "5433:5432"
+    volumes:
+      - default_template_pgdata:/var/lib/postgresql/data
 
   redis:
     image: redis:6.2
     ports:
       - "6380:6379"
+
+volumes:
+  default_template_pgdata:
