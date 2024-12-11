@@ -45,7 +45,6 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 
 ### Admin Interface
 - [ActiveAdmin](https://github.com/activeadmin/activeadmin): A flexible and extensible admin framework for Ruby on Rails applications, making it easy to build custom admin panels.
-- [ActiveAdmin Addons](https://github.com/platanus/activeadmin_addons): Enhances ActiveAdmin with additional features like input widgets, searchable selects, and improved UI components for better admin interfaces.
 
 ### Background Processing
 - [Sidekiq](https://github.com/mperham/sidekiq): Efficient background processing for Ruby applications.
@@ -63,9 +62,6 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 
 ### Error Tracking
 - [Rollbar](https://github.com/rollbar/rollbar-gem): Real-time error tracking and reporting.
-
-### Debugging
-- [Byebug](https://github.com/deivid-rodriguez/byebug): Debugging tool for Ruby applications.
 
 ### Code Quality & Linting
 - [Rubocop Rails Suite](https://github.com/Grigore-George-Mihai/rubocop-rails-suite): A custom suite that bundles Rubocop with various plugins for Rails projects.
