@@ -45,7 +45,6 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 
 ### Admin Interface
 - [ActiveAdmin](https://github.com/activeadmin/activeadmin): A flexible and extensible admin framework for Ruby on Rails applications, making it easy to build custom admin panels.
-- [ActiveAdmin Addons](https://github.com/platanus/activeadmin_addons): Enhances ActiveAdmin with additional features like input widgets, searchable selects, and improved UI components for better admin interfaces.
 
 ### Background Processing
 - [Sidekiq](https://github.com/mperham/sidekiq): Efficient background processing for Ruby applications.
