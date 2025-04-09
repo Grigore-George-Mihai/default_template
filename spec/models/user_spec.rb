@@ -69,4 +69,11 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe "#full_name" do
+    it "returns the first and last name joined by a space" do
+      user = build(:user, first_name: "Ada", last_name: "Lovelace")
+      expect(user.full_name).to eq("Ada Lovelace")
+    end
+  end
 end
