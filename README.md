@@ -1,4 +1,4 @@
-# Monolith Template
+## Monolith Template
 
 This repository serves as a default template for a monolithic Ruby on Rails (RoR) application. It includes a pre-configured setup with essential gems and tools to streamline development.
 
@@ -26,14 +26,14 @@ git clone https://github.com/Grigore-George-Mihai/default_template
 
 This will update the app name everywhere it appears (module name, titles, DB names, cable prefixes, Docker volumes, etc.).
 ```bash
-  bin/rails setup:rename_app
+bin/rails setup:rename_app
 ```
 
 **2. Create Environment Files**
 
 Copy environment template files into `.env.development` and `.env.test`.
 ```bash
-  bin/rails setup:copy_env
+bin/rails setup:copy_env
 ```
 Then open each file and update values as needed:
 - Database credentials (`POSTGRES_USER`, `POSTGRES_PASSWORD`)
