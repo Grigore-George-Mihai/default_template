@@ -1,12 +1,12 @@
-version: 2
+version: 3
 updates:
 - package-ecosystem: bundler
   directory: "/"
   schedule:
     interval: monthly
-  open-pull-requests-limit: 5
+  open-pull-requests-limit: 10
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
     interval: monthly
-  open-pull-requests-limit: 5
+  open-pull-requests-limit: 10
