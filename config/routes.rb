@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     mount PgHero::Engine => "/pghero"
   end
 
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   # Define root route
   root "home#index"
 

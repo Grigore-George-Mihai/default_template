@@ -1,8 +1,186 @@
-// Flash Messages
+// ============================================================
+// Design System – CSS custom properties
+// ============================================================
+:root {
+  --primary:        #6366F1;
+  --primary-dark:   #4F46E5;
+  --primary-light:  #EEF2FF;
+  --danger:         #DC2626;
+  --danger-light:   #FEF2F2;
+  --bg-body:        #F8FAFC;
+  --bg-surface:     #FFFFFF;
+  --text-primary:   #1E293B;
+  --text-muted:     #64748B;
+  --border-color:   #E2E8F0;
+  --radius:         0.5rem;
+  --radius-lg:      0.75rem;
+  --shadow-sm:      0 1px 2px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.1);
+  --shadow:         0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+  --shadow-lg:      0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  --transition:     150ms cubic-bezier(.4,0,.2,1);
+  --bs-border-color: var(--border-color);
+}
+
+// ============================================================
+// Base
+// ============================================================
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+  &:hover { color: var(--primary-dark); }
+}
+
+// ============================================================
+// Bootstrap overrides
+// ============================================================
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary-dark);
+  --bs-btn-hover-border-color: var(--primary-dark);
+  --bs-btn-active-bg: var(--primary-dark);
+  --bs-btn-focus-shadow-rgb: 99, 102, 241;
+}
+
+.btn {
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  --bs-card-border-color: var(--border-color);
+  transition: box-shadow var(--transition);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.section-title { letter-spacing: -0.02em; }
+
+.feature-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--primary-light);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i { color: var(--primary); font-size: 0.9rem; }
+}
+
+// ============================================================
+// Flash / Toast messages
+// ============================================================
 .alert-top-right {
   position: fixed;
-  top: 0;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   z-index: 9999;
-  text-align: center;
+  min-width: 280px;
+  max-width: 380px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+// ============================================================
+// Auth pages
+// ============================================================
+.auth-wrapper {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.auth-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2.5rem 2rem;
+  width: 100%;
+  max-width: 440px;
+
+  .auth-logo {
+    text-align: center;
+    margin-bottom: 1.75rem;
+    a {
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.04em;
+      &:hover { color: var(--primary-dark); }
+    }
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .form-actions {
+    margin-top: 1.5rem;
+    .btn { width: 100%; padding: 0.65rem; font-size: 0.95rem; }
+  }
+
+  .auth-links {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.375rem 0.75rem;
+    a { color: var(--text-muted); &:hover { color: var(--primary); } }
+  }
+}
+
+// ============================================================
+// Profile / edit pages
+// ============================================================
+.page-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin-top: 2rem;
+
+  h2, h3 { letter-spacing: -0.02em; }
+
+  .form-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .danger-zone {
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  &--narrow { max-width: 680px; margin-left: auto; margin-right: auto; }
 }

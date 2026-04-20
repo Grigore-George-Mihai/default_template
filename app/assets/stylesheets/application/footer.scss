@@ -1,3 +1,12 @@
 footer {
-  height: 100px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+
+  .footer-bottom {
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
 }

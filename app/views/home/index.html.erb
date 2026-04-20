@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%# Hero %>
+<section class="py-5 mt-2">
+  <% unless user_signed_in? %>
+    <div class="d-flex gap-3 flex-wrap justify-content-center">
+      <%= link_to "Get started free", new_user_registration_path, class: "btn btn-primary btn-lg px-4" %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-outline-secondary btn-lg px-4" %>
+    </div>
+  <% end %>
+</section>
+
+<%# Features %>
+<section class="py-4 mb-4">
+  <h2 class="fw-bold mb-1 section-title">Everything included</h2>
+  <p class="mb-4 text-muted">All the infrastructure decisions have been made. Just start building features.</p>
+
+  <div class="row g-3">
+    <% HomeHelper::FEATURES.each do |f| %>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border">
+          <div class="card-body p-4">
+            <div class="mb-3 feature-icon">
+              <i class="fas <%= f[:icon] %>"></i>
+            </div>
+            <h6 class="fw-semibold mb-1"><%= f[:title] %></h6>
+            <p class="small mb-0 text-muted"><%= f[:desc] %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
